@@ -1,74 +1,80 @@
+spring: 
+  profiles:
+    active:
+    - dev
+--- 
 server:
   port: 8001
 spring: 
-  profiles: dev
-  application:
-    name: microservicecloud-config-eureka-client
-mybatis: 
-  config-location: classpath:mybatis/mybatis.cfg.xml  #mybatisÅäÖÃÎÄ¼şÂ·¾¶
-  type-aliases-package: com.yuan                       #ËùÓĞÊµÌåÀàËùÔÚµÄ°ü
-  mapper-locations:
-  - classpath:mybatis/mapper/**/*.xml                 #Ó³ÉäÎÄ¼ş
-spring: 
-  application: 
-    name: microservicecloud-dept                       #Ó¦ÓÃÃû³Æ
-  datasource: 
-    type: com.alibaba.druid.pool.DruidDataSource        #Êı¾İÔ´²Ù×÷ÀàĞÍ
-    driver-class-name: org.gjt.mm.mysql.Driver         #Êı¾İ¿âÇı¶¯°ü
-    url: jdbc:mysql://47.94.252.160:3306/cloudDB01
+   profiles: dev
+   application: 
+    name: microservicecloud-config-dept-client
+   datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://localhost:3306/cloudDB03
     username: root
-    password: yaoyao1104
+    password: 123456
     dbcp2:
-     min-idle: 5                                       #Êı¾İ¿âÁ¬½Ó³Ø×îĞ¡Î¬³ÖÁ¬½ÓÊı
-     initial-size: 5                                   #³õÊ¼»¯Á¬½ÓÊı
-     max-total: 5                                      #×î´óÁ¬½ÓÊı
-     max-wait-mills: 200                               #×î´óµÈ´ıÊ±¼ä
-eureka:
-  client:
-    service-url:
-      defaultZone: http://springcloud01.com:7001/eureka/
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 200 
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml
+  type-aliases-package: com.atguigu.springcloud.entities
+  mapper-locations:
+  - classpath:mybatis/mapper/**/*.xml
+ 
+eureka: 
+  client: #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…
+    service-url: 
+      defaultZone: http://eureka7001.com:7001/eureka
   instance:
-    instance-id: microservicecloud-dept01
+    instance-id: dept-8001.com
     prefer-ip-address: true
-info: 
-  app.name: microservicecloud
+ 
+info:
+  app.name: atguigu-microservicecloud-springcloudconfig01
+  company.name: www.atguigu.com
   build.artifactId: $project.artifactId$
   build.version: $project.version$
 ---
 server:
-  port: 8002
+  port: 8001
 spring: 
-  profiles: test
-  application:
-    name: microservicecloud-config-eureka-client
-mybatis: 
-  config-location: classpath:mybatis/mybatis.cfg.xml  #mybatisÅäÖÃÎÄ¼şÂ·¾¶
-  type-aliases-package: com.yuan                       #ËùÓĞÊµÌåÀàËùÔÚµÄ°ü
-  mapper-locations:
-  - classpath:mybatis/mapper/**/*.xml                 #Ó³ÉäÎÄ¼ş
-spring: 
-  application: 
-    name: microservicecloud-dept                       #Ó¦ÓÃÃû³Æ
-  datasource: 
-    type: com.alibaba.druid.pool.DruidDataSource        #Êı¾İÔ´²Ù×÷ÀàĞÍ
-    driver-class-name: org.gjt.mm.mysql.Driver         #Êı¾İ¿âÇı¶¯°ü
-    url: jdbc:mysql://47.94.252.160:3306/cloudDB02
+   profiles: test
+   application: 
+    name: microservicecloud-config-dept-client
+   datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://localhost:3306/cloudDB02
     username: root
-    password: yaoyao1104
+    password: 123456
     dbcp2:
-     min-idle: 5                                       #Êı¾İ¿âÁ¬½Ó³Ø×îĞ¡Î¬³ÖÁ¬½ÓÊı
-     initial-size: 5                                   #³õÊ¼»¯Á¬½ÓÊı
-     max-total: 5                                      #×î´óÁ¬½ÓÊı
-     max-wait-mills: 200                               #×î´óµÈ´ıÊ±¼ä
-eureka:
-  client:
-    service-url:
-      defaultZone: http://springcloud01.com:7001/eureka/
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 200  
+  
+  
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml
+  type-aliases-package: com.atguigu.springcloud.entities
+  mapper-locations:
+  - classpath:mybatis/mapper/**/*.xml
+ 
+eureka: 
+  client: #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…
+    service-url: 
+      defaultZone: http://eureka7001.com:7001/eureka
   instance:
-    instance-id: microservicecloud-dept01
+    instance-id: dept-8001.com
     prefer-ip-address: true
-info: 
-  app.name: microservicecloud
+ 
+info:
+  app.name: atguigu-microservicecloud-springcloudconfig02
+  company.name: www.atguigu.com
   build.artifactId: $project.artifactId$
   build.version: $project.version$
- 
