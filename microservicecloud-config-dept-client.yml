@@ -3,26 +3,26 @@ server:
 spring: 
   profiles: dev
   application:
-    name: microservicecloud-config-eureka-client
+    name: microservicecloud-config-dept-client
 mybatis: 
-  config-location: classpath:mybatis/mybatis.cfg.xml  #mybatisÅäÖÃÎÄ¼şÂ·¾¶
-  type-aliases-package: com.yuan                       #ËùÓĞÊµÌåÀàËùÔÚµÄ°ü
+  config-location: classpath:mybatis/mybatis.cfg.xml  #mybatisé…ç½®æ–‡ä»¶è·¯å¾„
+  type-aliases-package: com.yuan                       #æ‰€æœ‰å®ä½“ç±»æ‰€åœ¨çš„åŒ…
   mapper-locations:
-  - classpath:mybatis/mapper/**/*.xml                 #Ó³ÉäÎÄ¼ş
+  - classpath:mybatis/mapper/**/*.xml                 #æ˜ å°„æ–‡ä»¶
 spring: 
   application: 
-    name: microservicecloud-dept                       #Ó¦ÓÃÃû³Æ
+    name: microservicecloud-dept                       #åº”ç”¨åç§°
   datasource: 
-    type: com.alibaba.druid.pool.DruidDataSource        #Êı¾İÔ´²Ù×÷ÀàĞÍ
-    driver-class-name: org.gjt.mm.mysql.Driver         #Êı¾İ¿âÇı¶¯°ü
+    type: com.alibaba.druid.pool.DruidDataSource        #æ•°æ®æºæ“ä½œç±»å‹
+    driver-class-name: org.gjt.mm.mysql.Driver         #æ•°æ®åº“é©±åŠ¨åŒ…
     url: jdbc:mysql://47.94.252.160:3306/cloudDB01
     username: root
     password: yaoyao1104
     dbcp2:
-     min-idle: 5                                       #Êı¾İ¿âÁ¬½Ó³Ø×îĞ¡Î¬³ÖÁ¬½ÓÊı
-     initial-size: 5                                   #³õÊ¼»¯Á¬½ÓÊı
-     max-total: 5                                      #×î´óÁ¬½ÓÊı
-     max-wait-mills: 200                               #×î´óµÈ´ıÊ±¼ä
+     min-idle: 5                                       #æ•°æ®åº“è¿æ¥æ± æœ€å°ç»´æŒè¿æ¥æ•°
+     initial-size: 5                                   #åˆå§‹åŒ–è¿æ¥æ•°
+     max-total: 5                                      #æœ€å¤§è¿æ¥æ•°
+     max-wait-mills: 200                               #æœ€å¤§ç­‰å¾…æ—¶é—´
 eureka:
   client:
     service-url:
@@ -40,26 +40,26 @@ server:
 spring: 
   profiles: test
   application:
-    name: microservicecloud-config-eureka-client
+    name: microservicecloud-config-dept-client
 mybatis: 
-  config-location: classpath:mybatis/mybatis.cfg.xml  #mybatisÅäÖÃÎÄ¼şÂ·¾¶
-  type-aliases-package: com.yuan                       #ËùÓĞÊµÌåÀàËùÔÚµÄ°ü
+  config-location: classpath:mybatis/mybatis.cfg.xml  #mybatisé…ç½®æ–‡ä»¶è·¯å¾„
+  type-aliases-package: com.yuan                       #æ‰€æœ‰å®ä½“ç±»æ‰€åœ¨çš„åŒ…
   mapper-locations:
-  - classpath:mybatis/mapper/**/*.xml                 #Ó³ÉäÎÄ¼ş
+  - classpath:mybatis/mapper/**/*.xml                 #æ˜ å°„æ–‡ä»¶
 spring: 
   application: 
-    name: microservicecloud-dept                       #Ó¦ÓÃÃû³Æ
+    name: microservicecloud-dept                       #åº”ç”¨åç§°
   datasource: 
-    type: com.alibaba.druid.pool.DruidDataSource        #Êı¾İÔ´²Ù×÷ÀàĞÍ
-    driver-class-name: org.gjt.mm.mysql.Driver         #Êı¾İ¿âÇı¶¯°ü
+    type: com.alibaba.druid.pool.DruidDataSource        #æ•°æ®æºæ“ä½œç±»å‹
+    driver-class-name: org.gjt.mm.mysql.Driver         #æ•°æ®åº“é©±åŠ¨åŒ…
     url: jdbc:mysql://47.94.252.160:3306/cloudDB02
     username: root
     password: yaoyao1104
     dbcp2:
-     min-idle: 5                                       #Êı¾İ¿âÁ¬½Ó³Ø×îĞ¡Î¬³ÖÁ¬½ÓÊı
-     initial-size: 5                                   #³õÊ¼»¯Á¬½ÓÊı
-     max-total: 5                                      #×î´óÁ¬½ÓÊı
-     max-wait-mills: 200                               #×î´óµÈ´ıÊ±¼ä
+     min-idle: 5                                       #æ•°æ®åº“è¿æ¥æ± æœ€å°ç»´æŒè¿æ¥æ•°
+     initial-size: 5                                   #åˆå§‹åŒ–è¿æ¥æ•°
+     max-total: 5                                      #æœ€å¤§è¿æ¥æ•°
+     max-wait-mills: 200                               #æœ€å¤§ç­‰å¾…æ—¶é—´
 eureka:
   client:
     service-url:
