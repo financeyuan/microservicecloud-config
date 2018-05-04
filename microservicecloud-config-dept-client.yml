@@ -36,8 +36,9 @@ eureka:
  
 info:
   app.name: atguigu-microservicecloud-springcloudconfig01
-  build.artifactId: $project.artifactId$
-  build.version: $project.version$
+  build: 
+    artifactId: $project.artifactId$
+    version: $project.version$
 ---
 server:
   port: 8001
@@ -74,5 +75,6 @@ eureka:
  
 info:
   app.name: atguigu-microservicecloud-springcloudconfig02
-  build.artifactId: $project.artifactId$
-  build.version: $project.version$
+  build: 
+    artifactId: $project.artifactId$
+    version: $project.version$$
