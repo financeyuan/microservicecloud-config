@@ -7,8 +7,6 @@ spring:
 mybatis: 
   config-location: classpath:mybatis/mybatis.cfg.xml  #mybatis配置文件路径
   type-aliases-package: com.yuan                       #所有实体类所在的包
-  mapper-locations:
-  - classpath:mybatis/mapper/**/*.xml                 #映射文件
 spring: 
   application: 
     name: microservicecloud-dept                       #应用名称
@@ -44,8 +42,6 @@ spring:
 mybatis: 
   config-location: classpath:mybatis/mybatis.cfg.xml  #mybatis配置文件路径
   type-aliases-package: com.yuan                       #所有实体类所在的包
-  mapper-locations:
-  - classpath:mybatis/mapper/**/*.xml                 #映射文件
 spring: 
   application: 
     name: microservicecloud-dept                       #应用名称
